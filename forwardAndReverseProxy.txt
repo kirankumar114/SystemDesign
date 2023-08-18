@@ -1,0 +1,45 @@
+Forward Proxy:
+A forward proxy, also known as a client-side proxy, is a server that sits between a client (such as a user's computer) and the internet. When the client makes a request to access a resource on the internet, it sends the request to the forward proxy server. The forward proxy then forwards the client's request to the target server on the internet. The target server responds to the forward proxy, which in turn sends the response back to the client.
+
+Key points about forward proxies:
+
+Used by clients to access the internet indirectly.
+Often used for security and privacy reasons, allowing clients to access resources anonymously.
+Can be used to control and filter internet access for clients within an organization.
+Clients need to be configured to use the forward proxy.
+
+Forward Proxy Example:
+Imagine you're in a corporate environment where internet access is controlled and filtered. The company has a forward proxy in place to manage internet requests from its employees. In this scenario:
+
+You, as an employee, want to access a website on the internet. Your computer is configured to use the company's forward proxy server.Instead of directly connecting to the website, your request goes to the forward proxy.
+The forward proxy fetches the website content on your behalf and forwards it back to you. This setup allows the company to filter and monitor internet traffic and provides some level of anonymity for your browsing.
+
+
+
+Reverse Proxy:
+A reverse proxy, also known as a server-side proxy, is a server that sits between clients and backend servers. It receives requests from clients and forwards them to the appropriate backend server based on various factors like load balancing, content routing, or security considerations. Clients interact with the reverse proxy as if it were the actual server, while the reverse proxy manages the distribution of requests among multiple backend servers.
+
+Key points about reverse proxies:
+
+Used to distribute incoming client requests to multiple backend servers.
+Often used for load balancing, distributing traffic among servers to improve performance and reliability.
+Can handle SSL termination (decrypting incoming requests) to offload processing from backend servers.
+Provides an additional layer of security by hiding backend servers from external clients.
+Clients are generally unaware of the existence of the backend servers.
+
+Reverse Proxy Example:
+Consider a situation where you're running a website that receives a significant amount of traffic. To distribute the load and improve performance, you set up a reverse proxy. Here's how it works:
+
+Users access your website by sending requests to your domain name (e.g., www.example.com).
+The requests go to a reverse proxy server that sits in front of your actual web servers.
+The reverse proxy server decides which backend server should handle the request (based on load balancing algorithms, server health, etc.).
+The selected backend server processes the request and sends the response back to the reverse proxy.
+The reverse proxy then forwards the response to the user.
+This setup improves website performance, allows for seamless scaling, and adds an extra layer of security by hiding the backend servers from external users.
+
+An api gateway is an example of reverse proxy, Squid procy is an example of Reverse Proxy.
+
+In summary, the main difference between forward and reverse proxies is their primary direction of communication:
+
+Forward proxies facilitate client requests to external servers (client to internet).
+Reverse proxies manage incoming client requests and distribute them to backend servers (client to proxy to server).
